@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">yummy</string>
+    <string name="title_home">Home</string>
+    <string name="title_search">Search</string>
+    <string name="title_note">Note</string>
+    <string name="title_news">News</string>
+    <string name="title_favorite">Favorite</string>
+    <string name="title_splash">Get Started</string>
 </resources>
