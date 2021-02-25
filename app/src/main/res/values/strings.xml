@@ -6,4 +6,6 @@
     <string name="title_news">News</string>
     <string name="title_favorite">Favorite</string>
     <string name="title_splash">Get Started</string>
+
+    <string name="error_parse_json">Not type Json</string>
 </resources>
