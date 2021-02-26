@@ -1,4 +1,4 @@
-package com.example.yummy.data.source.model
+package com.example.yummy.data.model
 
 import android.content.ContentValues
 import android.database.Cursor
