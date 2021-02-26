@@ -1,5 +1,5 @@
 ## Related Tickets
-- [#Task xxxxx: Content]({https://edu-redmine.sun-asterisk.vn/issues/xxxx})
+- [#Task xxxxx: Content](https://edu-redmine.sun-asterisk.vn/issues/xxxx)
 ## WHAT
 - 
 ## Evidence (Screenshot or Video)
