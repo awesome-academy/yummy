@@ -1,15 +1,14 @@
 package com.example.yummy.data.source.local
 
-import com.example.yummy.data.source.FoodDataSource
 import com.example.yummy.data.source.NoteDataSource
 import com.example.yummy.data.source.local.dao.NoteDao
 import com.example.yummy.data.source.local.utils.LocalAsyncTask
 import com.example.yummy.data.source.local.utils.OnDataLocalCallback
-import com.example.yummy.data.source.model.Note
+import com.example.yummy.data.model.Note
 
 class NoteLocalDataSource(
     private val noteDao: NoteDao
-) : NoteDataSource.Local{
+) : NoteDataSource{
 
     override fun getAllNotes(callback: OnDataLocalCallback<List<Note>>) {
         LocalAsyncTask<Unit, List<Note>>(callback) {

@@ -2,7 +2,7 @@ package com.example.yummy.data.source.local.dao
 
 import android.annotation.SuppressLint
 import com.example.yummy.data.source.local.db.AppDatabase
-import com.example.yummy.data.source.model.Note
+import com.example.yummy.data.model.Note
 
 class NoteDaoImp private constructor(database: AppDatabase) : NoteDao {
     private val writableDB = database.writableDatabase

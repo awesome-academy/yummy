@@ -1,6 +1,6 @@
 package com.example.yummy.data.source.local.dao
 
-import com.example.yummy.data.source.model.Note
+import com.example.yummy.data.model.Note
 
 interface NoteDao {
     fun getAllNotes() : List<Note>
