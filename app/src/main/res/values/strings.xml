@@ -8,6 +8,8 @@
     <string name="title_splash">Get Started</string>
     <string name="title_search_meals">Search Meals</string>
     <string name="title_area">Areas</string>
+    <string name="title_all">All</string>
+    <string name="title_new">New</string>
 
     <string name="error_parse_json">Not type Json</string>
 </resources>
