@@ -10,6 +10,13 @@
     <string name="title_area">Areas</string>
     <string name="title_all">All</string>
     <string name="title_new">New</string>
+    <string name="title_yummy">Yummy</string>
+    <string name="title_category">Category</string>
+    <string name="title_ingredients">Ingredients</string>
+    <string name="text_description">Description</string>
+    <string name="text_category_name">Name</string>
+    <string name="text_search_meal">Search Meal</string>
+    <string name="text_ingredient_name">Rice</string>
 
     <string name="error_parse_json">Not type Json</string>
 </resources>
