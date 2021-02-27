@@ -1,15 +1,15 @@
 package com.example.yummy.data.source.local
 
 import com.example.yummy.data.model.Meal
-import com.example.yummy.data.source.FoodDataSource
+import com.example.yummy.data.source.MealDataSource
 import com.example.yummy.data.source.local.dao.FavoriteDao
 import com.example.yummy.data.source.local.utils.LocalAsyncTask
 import com.example.yummy.data.source.local.utils.OnDataLocalCallback
 
 @Suppress("DEPRECATION")
-class FoodLocalDataSource private constructor(
+class MealLocalDataSource private constructor(
     private val favoriteDao: FavoriteDao
-) : FoodDataSource.Local {
+) : MealDataSource.Local {
 
     override fun insertMeal(meal: Meal, callback: OnDataLocalCallback<Long>) {
         LocalAsyncTask<Meal, Long>(callback) {
@@ -42,8 +42,8 @@ class FoodLocalDataSource private constructor(
     }
 
     companion object {
-        private var instance: FoodLocalDataSource? = null
+        private var instance: MealLocalDataSource? = null
         fun getInstance(favoriteDao: FavoriteDao) =
-            instance ?: FoodLocalDataSource(favoriteDao).also { instance = it }
+            instance ?: MealLocalDataSource(favoriteDao).also { instance = it }
     }
 }

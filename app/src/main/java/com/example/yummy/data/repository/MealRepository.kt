@@ -1,30 +1,14 @@
 package com.example.yummy.data.repository
 
 import com.example.yummy.data.model.*
-import com.example.yummy.data.source.FoodDataSource
+import com.example.yummy.data.source.MealDataSource
 import com.example.yummy.data.source.local.utils.OnDataLocalCallback
 import com.example.yummy.data.source.remote.utlis.OnDataCallback
 
-class FoodRepository private constructor(
-    private val local: FoodDataSource.Local,
-    private val remote: FoodDataSource.Remote
-) : FoodDataSource.Remote, FoodDataSource.Local {
-
-    override fun getCategory(callback: OnDataCallback<List<Category>>) {
-        remote.getCategory(callback)
-    }
-
-    override fun getArea(callback: OnDataCallback<List<Area>>) {
-        remote.getArea(callback)
-    }
-
-    override fun getIngredient(callback: OnDataCallback<List<Ingredient>>) {
-        remote.getIngredient(callback)
-    }
-
-    override fun getNews(callback: OnDataCallback<List<News>>) {
-        remote.getNews(callback)
-    }
+class MealRepository private constructor(
+    private val local: MealDataSource.Local,
+    private val remote: MealDataSource.Remote
+) : MealDataSource.Remote, MealDataSource.Local {
 
     override fun getMealByCategory(meal: String, callback: OnDataCallback<List<Meal>>) {
         remote.getMealByCategory(meal, callback)
@@ -63,8 +47,8 @@ class FoodRepository private constructor(
     }
 
     companion object {
-        private var instance: FoodRepository? = null
-        fun getInstance(local: FoodDataSource.Local, remote: FoodDataSource.Remote) =
-            instance ?: FoodRepository(local, remote).also { instance = it }
+        private var instance: MealRepository? = null
+        fun getInstance(local: MealDataSource.Local, remote: MealDataSource.Remote) =
+            instance ?: MealRepository(local, remote).also { instance = it }
     }
 }
