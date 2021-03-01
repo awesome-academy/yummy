@@ -7,6 +7,9 @@ class AreaFragment : BaseFragment() {
     override val layoutResource: Int
         get() = R.layout.fragment_area
 
+    override fun setupViews() {
+    }
+
     override fun initData() {
 
     }

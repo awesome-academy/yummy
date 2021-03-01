@@ -21,9 +21,12 @@ abstract class BaseFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        setupViews()
         initData()
         initActions()
     }
+
+    protected abstract fun setupViews()
 
     protected abstract fun initData()
 
