@@ -17,6 +17,10 @@
     <string name="text_category_name">Name</string>
     <string name="text_search_meal">Search Meal</string>
     <string name="text_ingredient_name">Rice</string>
+    <string name="text_back">Back</string>
+    <string name="text_meal">Food</string>
+    <string name="text_meal_description">Description</string>
+    <string name="text_description_detail">Details</string>
 
     <string name="error_parse_json">Not type Json</string>
 </resources>
