@@ -39,11 +39,11 @@ class NewsFragment : BaseFragment(), NewsContract.View {
         context?.showToast(message)
     }
 
-    override fun showDialog() {
+    override fun showLoading() {
         loadingDialog?.show()
     }
 
-    override fun hideDialog() {
+    override fun hideLoading() {
         loadingDialog?.hide()
     }
 

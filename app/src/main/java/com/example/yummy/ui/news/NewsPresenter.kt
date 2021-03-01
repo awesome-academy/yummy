@@ -10,16 +10,16 @@ class NewsPresenter(
 ) : NewsContract.Presenter {
 
     override fun getNews() {
-        view.showDialog()
+        view.showLoading()
         repository.getNews(object : OnDataCallback<List<News>> {
             override fun onSuccess(data: List<News>) {
-                view.hideDialog()
+                view.hideLoading()
                 view.showNews(data)
             }
 
             override fun onFail(exception: Exception?) {
                 view.showError(exception?.message.toString())
-                view.hideDialog()
+                view.hideLoading()
             }
         })
     }
