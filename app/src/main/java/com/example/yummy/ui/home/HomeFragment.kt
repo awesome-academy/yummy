@@ -7,6 +7,9 @@ class HomeFragment : BaseFragment() {
     override val layoutResource: Int
         get() = R.layout.fragment_home
 
+    override fun setupViews() {
+    }
+
     override fun initData() {
     }
 

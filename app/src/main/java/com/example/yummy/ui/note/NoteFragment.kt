@@ -7,6 +7,9 @@ class NoteFragment : BaseFragment() {
     override val layoutResource: Int
         get() = R.layout.fragment_note
 
+    override fun setupViews() {
+    }
+
     override fun initData() {
 
     }

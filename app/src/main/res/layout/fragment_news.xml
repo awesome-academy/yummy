@@ -22,7 +22,7 @@
         android:layout_marginStart="@dimen/dp_10"
         android:layout_marginTop="@dimen/dp_15"
         android:fontFamily="@font/chewy"
-        android:text="@string/title_new"
+        android:text="@string/title_news"
         android:textColor="@color/red_berry"
         android:textSize="@dimen/sp_30"
         app:layout_constraintStart_toStartOf="parent"
