@@ -13,6 +13,10 @@
     <string name="title_yummy">Yummy</string>
     <string name="title_category">Category</string>
     <string name="title_ingredients">Ingredients</string>
+    <string name="title_notification">Notification</string>
+    <string name="title_notification_question">Are you sure you want to delete this note?</string>
+    <string name="title_content_note">Enter note here</string>
+
     <string name="text_description">Description</string>
     <string name="text_category_name">Name</string>
     <string name="text_search_meal">Search Meal</string>
@@ -21,6 +25,9 @@
     <string name="text_meal">Food</string>
     <string name="text_meal_description">Description</string>
     <string name="text_description_detail">Details</string>
+
+    <string name="action_yes">Yes</string>
+    <string name="action_no">No</string>
 
     <string name="error_parse_json">Not type Json</string>
 </resources>
