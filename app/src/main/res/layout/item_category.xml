@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/dp_5"
     app:cardCornerRadius="@dimen/dp_10"
-    app:cardElevation="@dimen/dp_5">
+    app:cardElevation="@dimen/dp_2">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -24,6 +24,7 @@
                 android:id="@+id/imageCategory"
                 android:layout_width="@dimen/dp_100"
                 android:layout_height="@dimen/dp_100"
+                android:contentDescription="@null"
                 android:src="@drawable/ic_launcher_foreground" />
         </androidx.cardview.widget.CardView>
 

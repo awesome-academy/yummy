@@ -9,7 +9,7 @@ import org.json.JSONObject
 data class Ingredient(
     val id: String,
     val name: String,
-    val image: String,
+    val description: String?,
     val type: String
 )  {
 

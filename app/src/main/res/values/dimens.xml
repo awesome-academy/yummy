@@ -23,8 +23,10 @@
     <dimen name="dp_70">70dp</dimen>
     <dimen name="dp_75">75dp</dimen>
     <dimen name="dp_100">100dp</dimen>
+    <dimen name="dp_110">110dp</dimen>
     <dimen name="dp_150">150dp</dimen>
     <dimen name="dp_200">200dp</dimen>
     <dimen name="dp_300">300dp</dimen>
     <dimen name="dp_400">400dp</dimen>
+
 </resources>
