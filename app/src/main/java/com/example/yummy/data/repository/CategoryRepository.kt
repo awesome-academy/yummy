@@ -8,8 +8,8 @@ class CategoryRepository private constructor(
     private val remote: CategoryDataSource
 ) : CategoryDataSource {
 
-    override fun getCategory(callback: OnDataCallback<List<Category>>) {
-        remote.getCategory(callback)
+    override fun getCategories(callback: OnDataCallback<List<Category>>) {
+        remote.getCategories(callback)
     }
 
     companion object {

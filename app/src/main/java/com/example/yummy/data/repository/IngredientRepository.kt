@@ -8,8 +8,8 @@ class IngredientRepository private constructor(
     private val remote: IngredientDataSource
 ) : IngredientDataSource {
 
-    override fun getIngredient(callback: OnDataCallback<List<Ingredient>>) {
-        remote.getIngredient(callback)
+    override fun getIngredients(callback: OnDataCallback<List<Ingredient>>) {
+        remote.getIngredients(callback)
     }
 
     companion object {

@@ -4,5 +4,5 @@ import com.example.yummy.data.model.Category
 import com.example.yummy.data.source.remote.utlis.OnDataCallback
 
 interface CategoryDataSource {
-    fun getCategory(callback: OnDataCallback<List<Category>>)
+    fun getCategories(callback: OnDataCallback<List<Category>>)
 }

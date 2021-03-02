@@ -9,7 +9,7 @@ import org.json.JSONObject
 data class Category(
     val id: String,
     val name: String,
-    val image: String,
+    val image: String?,
     val description: String
 ) {
 
