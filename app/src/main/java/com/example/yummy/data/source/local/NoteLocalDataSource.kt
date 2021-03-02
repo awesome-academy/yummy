@@ -6,6 +6,7 @@ import com.example.yummy.data.source.local.utils.LocalAsyncTask
 import com.example.yummy.data.source.local.utils.OnDataLocalCallback
 import com.example.yummy.data.model.Note
 
+@Suppress("DEPRECATION")
 class NoteLocalDataSource(
     private val noteDao: NoteDao
 ) : NoteDataSource{
@@ -13,7 +14,7 @@ class NoteLocalDataSource(
     override fun getAllNotes(callback: OnDataLocalCallback<List<Note>>) {
         LocalAsyncTask<Unit, List<Note>>(callback) {
             noteDao.getAllNotes()
-        }.execute()
+        }.execute(Unit)
     }
 
     override fun addNote(note: Note, callback: OnDataLocalCallback<Boolean>) {

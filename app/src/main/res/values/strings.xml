@@ -31,4 +31,8 @@
     <string name="action_no">No</string>
 
     <string name="error_parse_json">Not type Json</string>
+
+    <string name="msg_insert_success">Insert Success</string>
+    <string name="msg_update_success">Update Success</string>
+    <string name="msg_delete_success">Delete Success</string>
 </resources>
