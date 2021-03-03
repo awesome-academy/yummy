@@ -2,18 +2,20 @@ package com.example.yummy.data.model
 
 import android.content.ContentValues
 import android.database.Cursor
+import android.os.Parcelable
 import com.example.yummy.utlis.MealModelConst.ID_MEAL
 import com.example.yummy.utlis.MealModelConst.STR_MEAL
 import com.example.yummy.utlis.MealModelConst.STR_MEAL_THUMB
+import kotlinx.android.parcel.Parcelize
 import org.json.JSONObject
 
+@Parcelize
 data class Meal(
     val name: String,
     val image: String,
     val id: String,
     val timeLong: Long
-) {
-
+) : Parcelable {
     constructor(jsonObject: JSONObject) : this(
         jsonObject.getString(STR_MEAL),
         jsonObject.getString(STR_MEAL_THUMB),

@@ -5,7 +5,9 @@ import com.example.yummy.base.BaseFragment
 import com.example.yummy.data.model.Area
 import com.example.yummy.ui.adapter.AreaAdapter
 import com.example.yummy.ui.dialog.LoadingDialog
+import com.example.yummy.ui.meallist.MealListFragment
 import com.example.yummy.utlis.RepositoryUtils
+import com.example.yummy.utlis.replaceFragment
 import com.example.yummy.utlis.showToast
 import kotlinx.android.synthetic.main.fragment_area.*
 
@@ -60,6 +62,9 @@ class AreaFragment : BaseFragment(), AreaContract.View {
     }
 
     private fun clickItem(area: Area) {
-        context?.showToast(area.name)
+        parentFragmentManager.replaceFragment(
+            R.id.frameMain,
+            MealListFragment.getInstance(area)
+        )
     }
 }

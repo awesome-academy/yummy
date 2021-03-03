@@ -10,16 +10,16 @@ class MealRepository private constructor(
     private val remote: MealDataSource.Remote
 ) : MealDataSource.Remote, MealDataSource.Local {
 
-    override fun getMealByCategory(meal: String, callback: OnDataCallback<List<Meal>>) {
-        remote.getMealByCategory(meal, callback)
+    override fun getMealByCategory(keyCategory: String, callback: OnDataCallback<List<Meal>>) {
+        remote.getMealByCategory(keyCategory, callback)
     }
 
-    override fun getMealByArea(meal: String, callback: OnDataCallback<List<Meal>>) {
-        remote.getMealByArea(meal, callback)
+    override fun getMealByArea(keyArea: String, callback: OnDataCallback<List<Meal>>) {
+        remote.getMealByArea(keyArea, callback)
     }
 
-    override fun getMealByIngredient(meal: String, callback: OnDataCallback<List<Meal>>) {
-        remote.getMealByIngredient(meal, callback)
+    override fun getMealByIngredient(keyIngredient: String, callback: OnDataCallback<List<Meal>>) {
+        remote.getMealByIngredient(keyIngredient, callback)
     }
 
     override fun searchMeal(wordSearch: String, callback: OnDataCallback<List<Meal>>) {
