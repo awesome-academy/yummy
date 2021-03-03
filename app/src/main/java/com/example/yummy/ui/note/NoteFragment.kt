@@ -34,6 +34,7 @@ class NoteFragment : BaseFragment(),
 
     override fun initActions() {
         floatButtonAdd.setOnClickListener {
+            parentFragmentManager.replaceFragment(R.id.frameMain, AddNoteFragment())
         }
     }
 
