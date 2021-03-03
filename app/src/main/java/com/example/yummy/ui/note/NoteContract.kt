@@ -8,6 +8,7 @@ interface NoteContract {
     interface View : BaseView {
         fun showAllNotes(notes: List<Note>)
         fun showMessage(message: Int)
+        fun closeFragment()
     }
 
     interface Presenter : BasePresenter {

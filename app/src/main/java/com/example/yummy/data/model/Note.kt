@@ -9,10 +9,10 @@ import java.util.*
 
 @Parcelize
 data class Note(
-    val id: Int,
-    var title: String,
-    var description: String,
-    private val date: String
+    val id: Int = 0,
+    var title: String = "",
+    var description: String = "",
+    private val date: String = ""
 ) : Parcelable {
     constructor(cursor: Cursor) : this(
         id = cursor.getInt(cursor.getColumnIndex(NOTE_ID)),

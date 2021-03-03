@@ -36,8 +36,9 @@ class NoteContentFragment : BaseFragment(), NoteContract.View {
                     it.description = editContent.text.toString()
                     notePresenter?.updateNote(it)
                 }
+            } else {
+                closeFragment()
             }
-            parentFragmentManager.removeFragment(R.id.frameMain, this)
         }
     }
 
@@ -46,6 +47,10 @@ class NoteContentFragment : BaseFragment(), NoteContract.View {
 
     override fun showMessage(message: Int) {
         context?.showToast(getString(message))
+    }
+
+    override fun closeFragment() {
+        parentFragmentManager.removeFragment(R.id.frameMain, this)
     }
 
     override fun showError(message: String) {
