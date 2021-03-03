@@ -18,6 +18,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/textTitle"
         android:layout_width="0dp"
         android:layout_height="@dimen/dp_40"
         android:layout_toEndOf="@+id/imageNotification"

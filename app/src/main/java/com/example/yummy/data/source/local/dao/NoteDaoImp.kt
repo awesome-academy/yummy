@@ -36,7 +36,6 @@ class NoteDaoImp private constructor(database: AppDatabase) : NoteDao {
             null,
             note.getContentValue()
         )
-        writableDB.close()
         return result > 0
     }
 
@@ -56,7 +55,6 @@ class NoteDaoImp private constructor(database: AppDatabase) : NoteDao {
             "${Note.NOTE_ID} =?",
             arrayOf(id.toString())
         )
-        writableDB.close()
         return result > 0
     }
 
