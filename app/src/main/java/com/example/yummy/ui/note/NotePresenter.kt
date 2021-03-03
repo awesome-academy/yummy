@@ -15,6 +15,7 @@ class NotePresenter(
         repository.addNote(note, object : OnDataLocalCallback<Boolean> {
             override fun onSuccess(data: Boolean) {
                 view.showMessage(R.string.msg_insert_success)
+                view.closeFragment()
             }
 
             override fun onFail(exception: Exception) {
@@ -27,6 +28,7 @@ class NotePresenter(
         repository.updateNote(note, object : OnDataLocalCallback<Boolean> {
             override fun onSuccess(data: Boolean) {
                 view.showMessage(R.string.msg_update_success)
+                view.closeFragment()
             }
 
             override fun onFail(exception: Exception) {

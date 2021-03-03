@@ -46,6 +46,9 @@ class NoteFragment : BaseFragment(),
         context?.showToast(getString(message))
     }
 
+    override fun closeFragment() {
+    }
+
     override fun showError(message: String) {
         context?.showToast(message)
     }
@@ -64,8 +67,8 @@ class NoteFragment : BaseFragment(),
     override fun openDeleteNoteDialog(note: Note) =
         DialogDeleteFragment.newInstance(note.id, ::chooseYes).show(parentFragmentManager, null)
 
-    override fun openEditNoteFragment(note: Note) {
-    }
+    override fun openEditNoteFragment(note: Note) =
+        parentFragmentManager.replaceFragment(R.id.frameMain, EditNoteFragment.newInstanceBundle(note))
 
     private fun initDialog() {
         context?.let { loadingDialog = LoadingDialog(it) }

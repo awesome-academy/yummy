@@ -1,5 +1,6 @@
 package com.example.yummy.ui.note
 
+import androidx.core.os.bundleOf
 import com.example.yummy.R
 import com.example.yummy.base.BaseFragment
 import com.example.yummy.data.model.Note
@@ -8,12 +9,20 @@ import com.example.yummy.utlis.removeFragment
 import com.example.yummy.utlis.showToast
 import kotlinx.android.synthetic.main.fragment_add_note.*
 
-class AddNoteFragment : BaseFragment(), NoteContract.View {
+class EditNoteFragment : BaseFragment(), NoteContract.View {
 
     private var notePresenter: NotePresenter? = null
+    private var note: Note? = null
+
     override val layoutResource get() = R.layout.fragment_add_note
 
     override fun setupViews() {
+        textTitle.text = getString(R.string.title_update_note)
+        arguments?.let {
+            note = it.getParcelable(BUNDLE_NOTE)
+            editTextName.setText(note?.title)
+            editTextDescription.setText(note?.description)
+        }
     }
 
     override fun initData() {
@@ -27,15 +36,18 @@ class AddNoteFragment : BaseFragment(), NoteContract.View {
             closeFragment()
         }
         imageButtonOk.setOnClickListener {
-            if (editTextName.text.isEmpty()) {
-                editTextName.error = getString(R.string.error_not_empty)
-            } else {
-                notePresenter?.insertNote(
-                    Note(
-                        title = editTextName.text.toString(),
+            when {
+                editTextName.text.isEmpty() -> {
+                    editTextName.error = getString(R.string.error_not_empty)
+                }
+                editTextName.text.toString() != note?.title || editTextDescription.text.toString() != note?.description -> {
+                    note?.apply {
+                        title = editTextName.text.toString()
                         description = editTextDescription.text.toString()
-                    )
-                )
+                        notePresenter?.updateNote(this)
+                    }
+                }
+                else -> closeFragment()
             }
         }
     }
@@ -59,5 +71,13 @@ class AddNoteFragment : BaseFragment(), NoteContract.View {
     }
 
     override fun hideLoading() {
+    }
+
+    companion object {
+        private const val BUNDLE_NOTE = "BUNDLE_NOTE"
+        fun newInstanceBundle(note: Note) = EditNoteFragment()
+            .apply {
+                arguments = bundleOf(BUNDLE_NOTE to note)
+            }
     }
 }
