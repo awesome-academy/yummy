@@ -7,9 +7,8 @@ import com.example.yummy.data.model.Ingredient
 import com.example.yummy.ui.adapter.CategoriesAdapter
 import com.example.yummy.ui.adapter.IngredientsAdapter
 import com.example.yummy.ui.dialog.LoadingDialog
-import com.example.yummy.utlis.RepositoryUtils
-import com.example.yummy.utlis.addFragment
-import com.example.yummy.utlis.showToast
+import com.example.yummy.ui.meallist.MealListFragment
+import com.example.yummy.utlis.*
 import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : BaseFragment(), HomeContract.View {
@@ -69,10 +68,16 @@ class HomeFragment : BaseFragment(), HomeContract.View {
     }
 
     private fun itemCategoryClicked(category: Category) {
-        parentFragmentManager.addFragment(R.id.frameMain, this)
+        parentFragmentManager.replaceFragment(
+            R.id.frameMain,
+            MealListFragment.getInstance(category)
+        )
     }
 
     private fun itemIngredientClicked(ingredient: Ingredient) {
-        parentFragmentManager.addFragment(R.id.frameMain, this)
+        parentFragmentManager.replaceFragment(
+            R.id.frameMain,
+            MealListFragment.getInstance(ingredient)
+        )
     }
 }

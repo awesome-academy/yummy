@@ -8,6 +8,7 @@ import com.example.yummy.data.source.local.dao.FavoriteDaoImpl
 import com.example.yummy.data.source.local.dao.NoteDaoImp
 import com.example.yummy.data.source.local.db.AppDatabase
 import com.example.yummy.data.source.remote.*
+import com.example.yummy.ui.meallist.MealListFragment
 
 object RepositoryUtils {
     fun getMealRepository(context: Context): MealRepository {

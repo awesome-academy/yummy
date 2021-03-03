@@ -14,9 +14,9 @@ interface MealDataSource {
     }
 
     interface Remote {
-        fun getMealByCategory(meal: String, callback: OnDataCallback<List<Meal>>)
-        fun getMealByArea(meal: String, callback: OnDataCallback<List<Meal>>)
-        fun getMealByIngredient(meal: String, callback: OnDataCallback<List<Meal>>)
+        fun getMealByCategory(keyCategory: String, callback: OnDataCallback<List<Meal>>)
+        fun getMealByArea(keyArea: String, callback: OnDataCallback<List<Meal>>)
+        fun getMealByIngredient(keyIngredient: String, callback: OnDataCallback<List<Meal>>)
         fun searchMeal(wordSearch: String, callback: OnDataCallback<List<Meal>>)
     }
 }
