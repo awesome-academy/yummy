@@ -10,3 +10,11 @@ fun ImageView.loadImage(image: String) {
         .placeholder(R.drawable.placeholer)
         .into(this)
 }
+
+fun ImageView.loadImageCircle(image: String) {
+    Glide.with(context).load(image)
+        .error(R.drawable.splash)
+        .circleCrop()
+        .placeholder(R.drawable.placeholer)
+        .into(this)
+}
