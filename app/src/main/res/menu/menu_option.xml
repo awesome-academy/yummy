@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/navigation_message"
+        android:icon="@drawable/ic_notification_gray"
+        android:title="@string/title_notification"
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/item_alarm"
+                android:icon="@drawable/ic_notification_red"
+                android:title="@string/title_alarm" />
+            <item
+                android:id="@+id/item_language"
+                android:icon="@drawable/ic_global"
+                android:title="@string/title_language">
+                <menu>
+                    <item
+                        android:id="@+id/item_english"
+                        android:title="@string/title_english" />
+                    <item
+                        android:id="@+id/item_vietnamese"
+                        android:title="@string/title_vietnamese" />
+                </menu>
+            </item>
+        </menu>
+    </item>
+</menu>

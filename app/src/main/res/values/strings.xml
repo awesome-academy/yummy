@@ -16,6 +16,14 @@
     <string name="title_notification">Notification</string>
     <string name="title_notification_question">Are you sure you want to delete this note?</string>
     <string name="title_content_note">Enter note here</string>
+    <string name="title_alarm">Alarm</string>
+    <string name="title_language">Language</string>
+    <string name="title_vietnamese">Vietnamese</string>
+    <string name="title_english">English</string>
+    <string name="title_new_note">New Note</string>
+    <string name="title_update_note">Update Note</string>
+    <string name="title_name">Name</string>
+    <string name="title_content">Content</string>
 
     <string name="text_description">Description</string>
     <string name="text_category_name">Name</string>
