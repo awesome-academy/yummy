@@ -8,17 +8,18 @@ import com.example.yummy.ui.adapter.CategoriesAdapter
 import com.example.yummy.ui.adapter.IngredientsAdapter
 import com.example.yummy.ui.dialog.LoadingDialog
 import com.example.yummy.ui.meallist.MealListFragment
+import com.example.yummy.ui.search.SearchFragment
 import com.example.yummy.utlis.*
 import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : BaseFragment(), HomeContract.View {
+
     private val categoriesAdapter = CategoriesAdapter(this::itemCategoryClicked)
     private val ingredientsAdapter = IngredientsAdapter(this::itemIngredientClicked)
     private var presenter: HomePresenter? = null
     private var loadingDialog: LoadingDialog? = null
 
-    override val layoutResource: Int
-        get() = R.layout.fragment_home
+    override val layoutResource get() = R.layout.fragment_home
 
     override fun setupViews() {
         initAdapters()
@@ -33,7 +34,9 @@ class HomeFragment : BaseFragment(), HomeContract.View {
     }
 
     override fun initActions() {
-
+        textSearch.setOnClickListener {
+            parentFragmentManager.addFragment(R.id.frameMain, SearchFragment())
+        }
     }
 
     override fun showCategories(categories: List<Category>) {

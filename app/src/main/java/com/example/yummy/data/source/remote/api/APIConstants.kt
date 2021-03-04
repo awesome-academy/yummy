@@ -15,6 +15,7 @@ object APIConstants {
     const val FILTER_AREA = "a"
     const val FILTER_INGREDIENT = "i"
     const val VALUE_LIST = "list"
+    const val MEAL_NULL = "{\"meals\":null}"
 
     const val RSS_ITEM = "item"
     const val RSS_TITLE = "title"

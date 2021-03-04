@@ -26,6 +26,7 @@
     <string name="title_content">Content</string>
     <string name="title_cancel">Cancel</string>
     <string name="title_suggest">Suggest</string>
+    <string name="title_result">Result</string>
 
     <string name="text_description">Description</string>
     <string name="text_category_name">Name</string>

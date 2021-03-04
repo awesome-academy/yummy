@@ -32,7 +32,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/editSearchMeal"
+            android:id="@+id/textSearch"
             android:layout_width="0dp"
             android:layout_height="@dimen/dp_36"
             android:layout_marginStart="@dimen/dp_8"
