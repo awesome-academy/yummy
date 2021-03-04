@@ -18,7 +18,8 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolBarHome"
         android:layout_width="wrap_content"
-        android:layout_height="@dimen/dp_60"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.09"
         app:layout_collapseMode="pin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"

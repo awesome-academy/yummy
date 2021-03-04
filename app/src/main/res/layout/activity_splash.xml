@@ -19,18 +19,20 @@
 
     <Button
         android:id="@+id/buttonSplash"
-        android:layout_width="@dimen/dp_150"
-        android:layout_height="@dimen/dp_50"
-        android:layout_marginTop="@dimen/dp_65"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/dp_64"
         android:background="@drawable/custom_button"
         android:fontFamily="@font/chewy"
         android:gravity="center"
         android:text="@string/title_splash"
         android:textAllCaps="false"
         android:textColor="@android:color/white"
-        android:textSize="@dimen/sp_20"
+        android:textSize="@dimen/sp_18"
+        app:layout_constraintDimensionRatio="4:1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageSplash" />
+        app:layout_constraintTop_toBottomOf="@+id/imageSplash"
+        app:layout_constraintWidth_percent="0.5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

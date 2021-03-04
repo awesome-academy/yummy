@@ -8,12 +8,13 @@
 
     <application
         android:allowBackup="true"
+        android:fullBackupContent="false"
         android:icon="@drawable/splash"
         android:label="@string/app_name"
         android:roundIcon="@drawable/splash"
         android:supportsRtl="true"
         android:theme="@style/Theme.Yummy">
-        <activity android:name=".ui.news.NewsActivity"/>
+        <activity android:name=".ui.news.NewsActivity" />
         <activity android:name=".ui.splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
