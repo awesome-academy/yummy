@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/dp_4"
-    app:cardCornerRadius="@dimen/dp_5"
+    app:cardCornerRadius="@dimen/dp_4"
     app:cardElevation="@dimen/dp_2"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             app:cardCornerRadius="@dimen/dp_50"
             android:layout_margin="@dimen/dp_10"
-            app:cardElevation="@dimen/dp_5">
+            app:cardElevation="@dimen/dp_4">
 
             <ImageView
                 android:id="@+id/imageMeal"

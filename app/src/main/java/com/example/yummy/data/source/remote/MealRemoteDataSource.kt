@@ -10,6 +10,7 @@ import com.example.yummy.utlis.NameConst
 import com.example.yummy.utlis.parseJsonArray
 import org.json.JSONObject
 
+@Suppress("DEPRECATION")
 class MealRemoteDataSource private constructor() : MealDataSource.Remote {
 
     override fun getMealByCategory(keyCategory: String, callback: OnDataCallback<List<Meal>>) {

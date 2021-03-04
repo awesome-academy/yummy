@@ -1,5 +1,6 @@
 package com.example.yummy.data.source.local.dao
 
+import android.annotation.SuppressLint
 import com.example.yummy.data.model.Meal
 import com.example.yummy.data.model.Meal.Companion.FAVORITE_KEY_ID
 import com.example.yummy.data.model.Meal.Companion.FAVORITE_TABLE_NAME
@@ -43,6 +44,7 @@ class FavoriteDaoImpl private constructor(database: AppDatabase) : FavoriteDao {
         return meals
     }
 
+    @SuppressLint("Recycle")
     override fun isFavorite(mealId: String): Int {
         val cursor = readableDB.query(
             FAVORITE_TABLE_NAME,

@@ -12,6 +12,7 @@ import com.example.yummy.utlis.NameConst
 import com.example.yummy.utlis.parseJsonArray
 import org.json.JSONObject
 
+@Suppress("DEPRECATION")
 class IngredientRemoteDataSource private constructor() : IngredientDataSource {
 
     override fun getIngredients(callback: OnDataCallback<List<Ingredient>>) {

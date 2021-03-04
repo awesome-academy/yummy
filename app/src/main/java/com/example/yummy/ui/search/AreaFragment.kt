@@ -7,6 +7,7 @@ import com.example.yummy.ui.adapter.AreaAdapter
 import com.example.yummy.ui.dialog.LoadingDialog
 import com.example.yummy.ui.meallist.MealListFragment
 import com.example.yummy.utlis.RepositoryUtils
+import com.example.yummy.utlis.addFragment
 import com.example.yummy.utlis.replaceFragment
 import com.example.yummy.utlis.showToast
 import kotlinx.android.synthetic.main.fragment_area.*
@@ -30,7 +31,9 @@ class AreaFragment : BaseFragment(), AreaContract.View {
     }
 
     override fun initActions() {
-
+        textSearch.setOnClickListener {
+            parentFragmentManager.addFragment(R.id.frameMain, SearchFragment())
+        }
     }
 
     override fun showAreas(areas: List<Area>) {

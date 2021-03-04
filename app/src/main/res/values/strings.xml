@@ -24,6 +24,8 @@
     <string name="title_update_note">Update Note</string>
     <string name="title_name">Name</string>
     <string name="title_content">Content</string>
+    <string name="title_cancel">Cancel</string>
+    <string name="title_suggest">Suggest</string>
 
     <string name="text_description">Description</string>
     <string name="text_category_name">Name</string>
