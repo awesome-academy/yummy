@@ -18,5 +18,6 @@ interface MealDataSource {
         fun getMealByArea(keyArea: String, callback: OnDataCallback<List<Meal>>)
         fun getMealByIngredient(keyIngredient: String, callback: OnDataCallback<List<Meal>>)
         fun searchMeal(wordSearch: String, callback: OnDataCallback<List<Meal>>)
+        fun getMealDetailByMeal(keyName: String, callback: OnDataCallback<List<MealDetail>>)
     }
 }

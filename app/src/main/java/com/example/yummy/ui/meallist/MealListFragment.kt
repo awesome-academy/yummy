@@ -8,9 +8,8 @@ import com.example.yummy.base.BaseFragment
 import com.example.yummy.data.model.*
 import com.example.yummy.ui.adapter.MealByOneAdapter
 import com.example.yummy.ui.dialog.LoadingDialog
-import com.example.yummy.utlis.RepositoryUtils
-import com.example.yummy.utlis.removeFragment
-import com.example.yummy.utlis.showToast
+import com.example.yummy.ui.mealdetail.MealDetailFragment
+import com.example.yummy.utlis.*
 import kotlinx.android.synthetic.main.fragment_meal_list.*
 
 class MealListFragment : BaseFragment(), MealListContract.View {
@@ -35,7 +34,15 @@ class MealListFragment : BaseFragment(), MealListContract.View {
     }
 
     override fun initActions() {
-        buttonBack.setOnClickListener { parentFragmentManager.removeFragment(R.id.frameMain, this) }
+        buttonBack.apply {
+            increaseHitArea(DIMENSION_20)
+            setOnClickListener {
+                parentFragmentManager.removeFragment(
+                    R.id.frameMain,
+                    this@MealListFragment
+                )
+            }
+        }
     }
 
     override fun showMeals(meals: List<Meal>) {
@@ -89,11 +96,12 @@ class MealListFragment : BaseFragment(), MealListContract.View {
     }
 
     private fun itemMealClicked(meal: Meal) {
-
+        parentFragmentManager.addFragment(R.id.frameMain, MealDetailFragment.getInstance(meal))
     }
 
     companion object {
         const val BUNDLE_MEAL = "BUNDLE_MEAL"
+        const val DIMENSION_20 = 20f
 
         fun getInstance(component: Any) = MealListFragment().apply {
             arguments = bundleOf(BUNDLE_MEAL to component)

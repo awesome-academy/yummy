@@ -37,6 +37,9 @@
     <string name="text_meal_description">Description</string>
     <string name="text_description_detail">Details</string>
     <string name="text_update">Updating…</string>
+    <string name="text_area">Area</string>
+    <string name="text_category">Category</string>
+    <string name="text_ingredient">Ingredient</string>
 
     <string name="action_yes">Yes</string>
     <string name="action_no">No</string>
@@ -47,4 +50,6 @@
     <string name="msg_insert_success">Insert Success</string>
     <string name="msg_update_success">Update Success</string>
     <string name="msg_delete_success">Delete Success</string>
+    <string name="msg_insert_success_meal_favorite">Insert %s Success</string>
+    <string name="msg_delete_success_meal_favorite">Delete %s Success</string>
 </resources>

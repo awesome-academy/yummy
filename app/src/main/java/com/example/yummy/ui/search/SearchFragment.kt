@@ -7,9 +7,8 @@ import com.example.yummy.base.BaseFragment
 import com.example.yummy.data.model.Meal
 import com.example.yummy.ui.adapter.MealByOneAdapter
 import com.example.yummy.ui.dialog.LoadingDialog
-import com.example.yummy.utlis.RepositoryUtils
-import com.example.yummy.utlis.removeFragment
-import com.example.yummy.utlis.showToast
+import com.example.yummy.ui.mealdetail.MealDetailFragment
+import com.example.yummy.utlis.*
 import kotlinx.android.synthetic.main.fragment_search.*
 
 class SearchFragment : BaseFragment(), SearchContract.View {
@@ -92,6 +91,6 @@ class SearchFragment : BaseFragment(), SearchContract.View {
     }
 
     private fun clickItemMeal(meal: Meal) {
-        context?.showToast(meal.name)
+        parentFragmentManager.addFragment(R.id.frameMain, MealDetailFragment.getInstance(meal))
     }
 }
