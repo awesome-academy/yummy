@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -90,16 +90,17 @@
             android:id="@+id/recyclerIngredient"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/dp_16"
             android:layout_marginTop="@dimen/dp_8"
-            android:layout_marginEnd="@dimen/dp_24"
+            android:layout_marginEnd="@dimen/dp_16"
             android:background="@drawable/bg_ingredient"
-            android:padding="@dimen/dp_2"
+            android:padding="@dimen/dp_4"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/textIngredients"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textIngredients"
             app:spanCount="2"
             tools:listitem="@layout/item_ingredient" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+</androidx.core.widget.NestedScrollView>

@@ -99,7 +99,7 @@
             android:layout_marginEnd="@dimen/dp_20"
             android:background="@drawable/custom_edit_text_black"
             android:importantForAutofill="no"
-            android:inputType="text"
+            android:inputType="textMultiLine"
             android:paddingStart="@dimen/dp_8"
             android:paddingEnd="@dimen/dp_8"
             app:layout_constraintEnd_toEndOf="@+id/viewBorder"

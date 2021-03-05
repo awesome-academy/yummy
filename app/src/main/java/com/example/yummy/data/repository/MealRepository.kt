@@ -26,6 +26,10 @@ class MealRepository private constructor(
         remote.searchMeal(wordSearch, callback)
     }
 
+    override fun getMealDetailByMeal(keyName: String, callback: OnDataCallback<List<MealDetail>>) {
+        remote.getMealDetailByMeal(keyName, callback)
+    }
+
     override fun insertMeal(meal: Meal, callback: OnDataLocalCallback<Long>) {
         local.insertMeal(meal, callback)
     }

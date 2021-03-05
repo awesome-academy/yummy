@@ -28,3 +28,9 @@ object NameConst {
     const val CATEGORIES = "categories"
     const val MEALS = "meals"
 }
+
+object MealDetailConst{
+    const val MEAL_DETAIL_AREA = "strArea"
+    const val MEAL_DETAIL_CATEGORY = "strCategory"
+    const val MEAL_DETAIL_INGREDIENT = "strIngredient"
+}

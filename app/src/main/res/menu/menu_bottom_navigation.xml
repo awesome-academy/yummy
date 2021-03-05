@@ -11,7 +11,7 @@
         android:title="@string/title_search" />
     <item
         android:id="@+id/menuFavorite"
-        android:icon="@drawable/ic_heart"
+        android:icon="@drawable/ic_un_favorite"
         android:title="@string/title_favorite" />
     <item
         android:id="@+id/menuNews"
