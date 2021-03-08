@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">yummy</string>
+    <string name="title_home">Trang chủ</string>
+    <string name="title_search">Tìm kiếm</string>
+    <string name="title_note">Ghi chú</string>
+    <string name="title_news">Tin tức</string>
+    <string name="title_favorite">Yêu thích</string>
+    <string name="title_splash">Bắt đầu</string>
+    <string name="title_search_meals">Tìm kiếm món ăn</string>
+    <string name="title_area">Quốc gia</string>
+    <string name="title_all">Tất cả</string>
+    <string name="title_new">Mới nhất</string>
+    <string name="title_yummy">Yummy</string>
+    <string name="title_category">Phân loại</string>
+    <string name="title_ingredients">Thành phần</string>
+    <string name="title_notification">Thông báo</string>
+    <string name="title_notification_question">Bạn có chắc chắn muốn xóa ghi chú này?</string>
+    <string name="title_content_note">Ghi chú tại đây</string>
+    <string name="title_alarm">Hẹn giờ</string>
+    <string name="title_language">Ngôn ngữ</string>
+    <string name="title_vietnamese">Tiếng Việt</string>
+    <string name="title_english">Tiếng Anh</string>
+    <string name="title_new_note">Ghi chú mới</string>
+    <string name="title_update_note">Chỉnh sửa ghi chú</string>
+    <string name="title_name">Tên ghi chú</string>
+    <string name="title_content">Nội dung ghi chú</string>
+    <string name="title_cancel">Hủy</string>
+    <string name="title_suggest">Gợi ý</string>
+    <string name="title_result">Kết quả</string>
+
+    <string name="text_description">Mô tả</string>
+    <string name="text_category_name">Tên</string>
+    <string name="text_search_meal">Tìm kiếm món ăn</string>
+    <string name="text_ingredient_name">Rice</string>
+    <string name="text_back">Trở về</string>
+    <string name="text_meal">Food</string>
+    <string name="text_meal_description">Mô tả</string>
+    <string name="text_description_detail">Chi tiết</string>
+    <string name="text_update">Cập nhật</string>
+    <string name="text_area">Quốc gia</string>
+    <string name="text_category">Phân loại</string>
+    <string name="text_ingredient">Thành phần</string>
+
+    <string name="action_yes">Có</string>
+    <string name="action_no">Không</string>
+
+    <string name="error_parse_json">Not type Json</string>
+    <string name="error_not_empty">Error! Not empty</string>
+    <string name="error_not_type">Error! Not type</string>
+
+    <string name="msg_insert_success">Thêm thành công</string>
+    <string name="msg_update_success">Chỉnh sửa thành công</string>
+    <string name="msg_delete_success">Xóa thành công</string>
+    <string name="msg_insert_success_meal_favorite">Thêm %s thành công</string>
+    <string name="msg_delete_success_meal_favorite">Xóa %s thành công</string>
+</resources>

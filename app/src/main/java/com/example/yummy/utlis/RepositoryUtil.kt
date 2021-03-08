@@ -2,6 +2,7 @@ package com.example.yummy.utlis
 
 import android.content.Context
 import com.example.yummy.data.repository.*
+import com.example.yummy.data.source.local.LanguageLocalDataSource
 import com.example.yummy.data.source.local.MealLocalDataSource
 import com.example.yummy.data.source.local.NoteLocalDataSource
 import com.example.yummy.data.source.local.dao.FavoriteDaoImpl
@@ -42,5 +43,11 @@ object RepositoryUtils {
     fun getNewsRepository(): NewsRepository {
         val remote = NewsRemoteDataSource.getInstance()
         return NewsRepository.getInstance(remote)
+    }
+
+    fun getLanguageRepository(context: Context): LanguageRepository {
+        val preferences = SharedPreferencesHelper.getInstance(context)
+        val local = LanguageLocalDataSource.getInstance(preferences)
+        return LanguageRepository.getInstance(local)
     }
 }
