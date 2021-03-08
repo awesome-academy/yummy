@@ -13,6 +13,7 @@ import com.example.yummy.utlis.*
 import kotlinx.android.synthetic.main.fragment_meal_list.*
 
 class MealListFragment : BaseFragment(), MealListContract.View {
+
     private val mealAdapter = MealByOneAdapter(this::itemMealClicked)
     private var presenter: MealListPresenter? = null
     private var loadingDialog: LoadingDialog? = null
@@ -47,6 +48,7 @@ class MealListFragment : BaseFragment(), MealListContract.View {
 
     override fun showMeals(meals: List<Meal>) {
         mealAdapter.updateData(meals)
+        recyclerMeals.startLayoutAnimation()
     }
 
     override fun showError(message: String) {
