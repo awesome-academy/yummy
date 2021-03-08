@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.yummy.R
 import com.example.yummy.data.model.Ingredient
 
-class IngredientsAdapter(val onItemClicked: (Ingredient) -> Unit) :
+class IngredientsAdapter(private val onItemClicked: (Ingredient) -> Unit) :
     RecyclerView.Adapter<IngredientsViewHolder>() {
 
     private val ingredients = mutableListOf<Ingredient>()

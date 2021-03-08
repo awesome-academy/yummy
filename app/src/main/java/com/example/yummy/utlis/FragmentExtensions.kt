@@ -24,3 +24,7 @@ fun FragmentManager.replaceFragment(layout: Int, fragment: Fragment) {
         .addToBackStack(null)
         .commit()
 }
+
+fun FragmentManager.clearBackStack() = apply {
+    popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE)
+}

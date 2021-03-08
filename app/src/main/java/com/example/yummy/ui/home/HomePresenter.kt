@@ -23,6 +23,7 @@ class HomePresenter(
 
             override fun onFail(exception: Exception?) {
                 view.showError(exception?.message.toString())
+                view.hideLoading()
             }
         })
     }
@@ -37,6 +38,7 @@ class HomePresenter(
 
             override fun onFail(exception: Exception?) {
                 view.showError(exception?.message.toString())
+                view.hideLoading()
             }
         })
     }
