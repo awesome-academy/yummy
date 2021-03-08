@@ -1,19 +1,22 @@
 package com.example.yummy.ui.splash
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import androidx.appcompat.app.AppCompatActivity
 import com.example.yummy.R
 import com.example.yummy.ui.main.MainActivity
-import kotlinx.android.synthetic.main.activity_splash.*
 
+private const val TIME: Long = 2000
+
+@Suppress("DEPRECATION")
 class SplashActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splash)
-        buttonSplash.setOnClickListener {
+        Handler().postDelayed({
             startActivity(MainActivity.getIntent(this))
             overridePendingTransition(R.anim.splash_in, R.anim.splash_out)
             finish()
-        }
+        }, TIME)
     }
 }

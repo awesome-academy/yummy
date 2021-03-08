@@ -46,6 +46,7 @@
 
     <string name="error_parse_json">Not type Json</string>
     <string name="error_not_empty">Error! Not empty</string>
+    <string name="error_not_type">Error! Not type</string>
 
     <string name="msg_insert_success">Insert Success</string>
     <string name="msg_update_success">Update Success</string>

@@ -7,10 +7,16 @@
     app:cardCornerRadius="@dimen/dp_16"
     app:cardElevation="0dp">
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_gradient" />
+
     <TextView
         android:id="@+id/textArea"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:alpha="0.6"
         android:ellipsize="end"
         android:gravity="center"
         android:maxLines="1"

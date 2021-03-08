@@ -29,6 +29,16 @@ object NameConst {
     const val MEALS = "meals"
 }
 
+object LanguageConst {
+    const val LANGUAGE_KEY = "language_key"
+    const val LANGUAGE_KEY_VIETNAMESE = "vi"
+    const val LANGUAGE_KEY_ENGLISH = "en"
+}
+
+object SharedPreferencesConst {
+    const val PREFS_NAME = "PREFS"
+}
+
 object MealDetailConst{
     const val MEAL_DETAIL_AREA = "strArea"
     const val MEAL_DETAIL_CATEGORY = "strCategory"

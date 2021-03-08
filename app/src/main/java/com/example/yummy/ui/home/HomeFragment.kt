@@ -35,7 +35,7 @@ class HomeFragment : BaseFragment(), HomeContract.View {
 
     override fun initActions() {
         textSearch.setOnClickListener {
-            parentFragmentManager.addFragment(R.id.frameMain, SearchFragment())
+            parentFragmentManager.replaceFragment(R.id.frameMain, SearchFragment())
         }
     }
 
