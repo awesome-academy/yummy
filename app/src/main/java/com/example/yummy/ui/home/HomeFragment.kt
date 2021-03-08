@@ -18,6 +18,7 @@ class HomeFragment : BaseFragment(), HomeContract.View {
     private val ingredientsAdapter = IngredientsAdapter(this::itemIngredientClicked)
     private var presenter: HomePresenter? = null
     private var loadingDialog: LoadingDialog? = null
+    private var isConnection = false
 
     override val layoutResource get() = R.layout.fragment_home
 
@@ -30,6 +31,12 @@ class HomeFragment : BaseFragment(), HomeContract.View {
         val categoryRepository = RepositoryUtils.getCategoryRepository()
         val ingredientRepository = RepositoryUtils.getIngredientRepository()
         presenter = HomePresenter(this, categoryRepository, ingredientRepository)
+        val context = context ?: return
+        isConnection = NetworkUtil.isConnection(context)
+        if (!isConnection) {
+            view?.showSnackBar(getString(R.string.msg_check_internet))
+            return
+        }
         presenter?.start()
     }
 

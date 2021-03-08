@@ -16,6 +16,7 @@ class SearchFragment : BaseFragment(), SearchContract.View {
     private val adapter = MealByOneAdapter(::clickItemMeal)
     private var searchPresenter: SearchPresenter? = null
     private var loadingDialog: LoadingDialog? = null
+    private var isConnection = false
 
     override val layoutResource get() = R.layout.fragment_search
 
@@ -28,6 +29,11 @@ class SearchFragment : BaseFragment(), SearchContract.View {
         val context = context ?: return
         val repository = RepositoryUtils.getMealRepository(context)
         searchPresenter = SearchPresenter(this, repository)
+        isConnection = NetworkUtil.isConnection(context)
+        if (!isConnection) {
+            view?.showSnackBar(getString(R.string.msg_check_internet))
+            return
+        }
         searchPresenter?.start()
     }
 

@@ -5,8 +5,7 @@ import com.example.yummy.base.BaseFragment
 import com.example.yummy.data.model.News
 import com.example.yummy.ui.adapter.NewsAdapter
 import com.example.yummy.ui.dialog.LoadingDialog
-import com.example.yummy.utlis.RepositoryUtils
-import com.example.yummy.utlis.showToast
+import com.example.yummy.utlis.*
 import kotlinx.android.synthetic.main.fragment_news.*
 
 class NewsFragment : BaseFragment(), NewsContract.View {
@@ -14,6 +13,7 @@ class NewsFragment : BaseFragment(), NewsContract.View {
     private val newsAdapter = NewsAdapter()
     private var newsPresenter: NewsPresenter? = null
     private var loadingDialog: LoadingDialog? = null
+    private var isConnection = false
 
     override val layoutResource get() = R.layout.fragment_news
 
@@ -25,6 +25,12 @@ class NewsFragment : BaseFragment(), NewsContract.View {
     override fun initData() {
         val repository = RepositoryUtils.getNewsRepository()
         newsPresenter = NewsPresenter(this, repository)
+        val context = context ?: return
+        isConnection = NetworkUtil.isConnection(context)
+        if (!isConnection) {
+            view?.showSnackBar(getString(R.string.msg_check_internet))
+            return
+        }
         newsPresenter?.start()
     }
 

@@ -6,10 +6,7 @@ import com.example.yummy.data.model.Area
 import com.example.yummy.ui.adapter.AreaAdapter
 import com.example.yummy.ui.dialog.LoadingDialog
 import com.example.yummy.ui.meallist.MealListFragment
-import com.example.yummy.utlis.RepositoryUtils
-import com.example.yummy.utlis.addFragment
-import com.example.yummy.utlis.replaceFragment
-import com.example.yummy.utlis.showToast
+import com.example.yummy.utlis.*
 import kotlinx.android.synthetic.main.fragment_area.*
 
 class AreaFragment : BaseFragment(), AreaContract.View {
@@ -17,6 +14,8 @@ class AreaFragment : BaseFragment(), AreaContract.View {
     private val areaAdapter = AreaAdapter()
     private var areaPresenter: AreaPresenter? = null
     private var loadingDialog: LoadingDialog? = null
+    private var isConnection = false
+
     override val layoutResource get() = R.layout.fragment_area
 
     override fun setupViews() {
@@ -27,6 +26,12 @@ class AreaFragment : BaseFragment(), AreaContract.View {
     override fun initData() {
         val repository = RepositoryUtils.getAreaRepository()
         areaPresenter = AreaPresenter(this, repository)
+        val context = context ?: return
+        isConnection = NetworkUtil.isConnection(context)
+        if (!isConnection) {
+            view?.showSnackBar(getString(R.string.msg_check_internet))
+            return
+        }
         areaPresenter?.start()
     }
 
