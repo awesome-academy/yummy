@@ -5,6 +5,7 @@ import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.yummy.R
+import com.example.yummy.utlis.clearBackStack
 
 abstract class BaseActivity : AppCompatActivity() {
     @get:LayoutRes
@@ -17,13 +18,16 @@ abstract class BaseActivity : AppCompatActivity() {
     }
 
     protected fun openFragment(fragment: Fragment) =
-        supportFragmentManager.beginTransaction().setCustomAnimations(
-            R.anim.slide_in,
-            R.anim.fade_out,
-            R.anim.fade_in,
-            R.anim.slide_out
-        )
-            .replace(R.id.frameMain, fragment).commit()
+        supportFragmentManager.clearBackStack()
+            .beginTransaction()
+            .setCustomAnimations(
+                R.anim.slide_in,
+                R.anim.fade_out,
+                R.anim.fade_in,
+                R.anim.slide_out
+            )
+            .replace(R.id.frameMain, fragment)
+            .commit()
 
     protected abstract fun initComponents()
 }

@@ -11,7 +11,6 @@ class FavoriteDaoImpl private constructor(database: AppDatabase) : FavoriteDao {
 
     private val writableDB = database.writableDatabase
     private val readableDB = database.readableDatabase
-    private var meals = mutableListOf<Meal>()
 
     override fun insertMeal(meal: Meal) =
         writableDB.insert(FAVORITE_TABLE_NAME, null, meal.getContentValue())
@@ -21,7 +20,7 @@ class FavoriteDaoImpl private constructor(database: AppDatabase) : FavoriteDao {
 
 
     override fun getAllMeals(): List<Meal> {
-        meals.clear()
+        val meals = mutableListOf<Meal>()
         val query = "SELECT * FROM $FAVORITE_TABLE_NAME"
         val cursor = readableDB.rawQuery(query, null)
         cursor.use {
@@ -33,7 +32,7 @@ class FavoriteDaoImpl private constructor(database: AppDatabase) : FavoriteDao {
     }
 
     override fun getNewMeals(): List<Meal> {
-        meals.clear()
+        val meals = mutableListOf<Meal>()
         val query = "SELECT * FROM $FAVORITE_TABLE_NAME ORDER BY $FAVORITE_TIME_LONG DESC LIMIT 5"
         val cursor = readableDB.rawQuery(query, null)
         cursor.use {

@@ -89,17 +89,20 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerIngredient"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
             android:layout_marginStart="@dimen/dp_16"
             android:layout_marginTop="@dimen/dp_8"
             android:layout_marginEnd="@dimen/dp_16"
             android:background="@drawable/bg_ingredient"
+            android:foregroundGravity="center"
             android:padding="@dimen/dp_4"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1.5"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textIngredients"
+            app:layout_constraintWidth_percent="0.95"
             app:spanCount="2"
             tools:listitem="@layout/item_ingredient" />
     </androidx.constraintlayout.widget.ConstraintLayout>
