@@ -40,13 +40,16 @@
     <string name="text_area">Quốc gia</string>
     <string name="text_category">Phân loại</string>
     <string name="text_ingredient">Thành phần</string>
+    <string name="text_choose_time_to_cook">Chọn thời gian nấu ăn</string>
+    <string name="text_cancel">Hủy</string>
+    <string name="text_ok">Đồng Ý</string>
 
     <string name="action_yes">Có</string>
     <string name="action_no">Không</string>
 
-    <string name="error_parse_json">Not type Json</string>
-    <string name="error_not_empty">Error! Not empty</string>
-    <string name="error_not_type">Error! Not type</string>
+    <string name="error_parse_json">Không phải loại json</string>
+    <string name="error_not_empty">Lỗi! Không dỗng</string>
+    <string name="error_not_type">Lỗi! Lỗi định dạng</string>
 
     <string name="msg_insert_success">Thêm thành công</string>
     <string name="msg_update_success">Chỉnh sửa thành công</string>
@@ -54,4 +57,5 @@
     <string name="msg_insert_success_meal_favorite">Thêm %s thành công</string>
     <string name="msg_delete_success_meal_favorite">Xóa %s thành công</string>
     <string name="msg_check_internet">Vui lòng kiểm tra kết nối Internet của bạn!</string>
+
 </resources>
